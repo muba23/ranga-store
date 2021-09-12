@@ -1,5 +1,6 @@
 const loadProducts = () => {
-  const url = `https://fakestoreapi.com/products`;
+  //const url = `https://fakestoreapi.com/products`;
+  const url = `https://raw.githubusercontent.com/biswajitdasme/fakestore/main/db.json?fbclid=IwAR2YuQxzKXG6MF2AysSIPa5FGM_7AYFb7wxjnsKuOmv6HGTO9Ft8pl3KFq8`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
