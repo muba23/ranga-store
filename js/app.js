@@ -22,7 +22,7 @@ const showProducts = products => {
                     <p>Category: ${product.category}</p>
                     <h3 class="text-dark"><span class="text-success fw-bold">Customer reviews</span> <br><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star-half-alt text-warning"></i> ${product.rating.rate} out of 5 <br> ${product.rating.count} customer ratings</h3>
                     <h2>Price: $ ${product.price}</h2>
-                    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn fw-bolder" style="background-color: #0080ff; color: white">Add to cart</button>
+                    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn fw-bolder mb-2" style="background-color: #0080ff; color: white">Add to cart</button>
                     <button id="details-btn" class="btn fw-bolder" style="background-color:#d22d2d;color:white">Details</button>
                 </div>
             `;
