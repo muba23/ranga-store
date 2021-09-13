@@ -1,6 +1,5 @@
 const loadProducts = () => {
   const url = `https://fakestoreapi.com/products`;
-  // const url = `https://raw.githubusercontent.com/biswajitdasme/fakestore/main/db.json?fbclid=IwAR2YuQxzKXG6MF2AysSIPa5FGM_7AYFb7wxjnsKuOmv6HGTO9Ft8pl3KFq8`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
@@ -11,7 +10,7 @@ loadProducts();
 const showProducts = products => {
      const allProducts = products.map((pd) => pd);
      for (const product of allProducts) {
-            const image = product.image; //image problem solved here
+            const image = product.image; 
             const div = document.createElement("div");
             div.classList.add("product");
             div.innerHTML = `
@@ -27,8 +26,9 @@ const showProducts = products => {
                     <button id="details-btn" class="btn fw-bolder" style="background-color:#d22d2d;color:white">Details</button>
                 </div>
             `;
-          document.getElementById("all-products").appendChild(div);
+          document.getElementById("all-products").appendChild(div);  
   }
+
 };
 
 let count = 0;
@@ -38,7 +38,7 @@ const addToCart = (id, price) => {
 
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
-  updateTotal(); //updateTotal function added
+  updateTotal(); 
 };
 
 const getInputValue = id => {
@@ -52,7 +52,7 @@ const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = parseFloat(total).toFixed(2); //price is fixed to 2 decimal place
+  document.getElementById(id).innerText = parseFloat(total).toFixed(2); 
 };
 
 // set innerText function

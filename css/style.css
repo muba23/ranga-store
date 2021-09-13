@@ -13,12 +13,11 @@ body {
   border: none;
 } */
 .search-box {
-  border: 1px solid rgb(3, 118, 211);
+  border: 1px solid rgb(148, 191, 226);
   width: 381px;
   border-radius: 5px;
   margin: auto;
   margin-top: 50px;
-  /* border-right: none; */
 }
 .search-button {
   padding: 10px 60px;
@@ -31,7 +30,6 @@ body {
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
