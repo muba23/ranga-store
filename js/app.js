@@ -15,15 +15,17 @@ const showProducts = products => {
             const div = document.createElement("div");
             div.classList.add("product");
             div.innerHTML = `
-          <div class="card single-product bg-success bg-opacity-10">
-            <div>
-              <img class="product-image" src=${image}></img>
-            </div>
-            <h3>${product.title}</h3>
-            <p>Category: ${product.category}</p>
-            <h2>Price: $ ${product.price}</h2>
-            <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn " style="background-color: #0080ff; color: white">Add to cart</button>
-            <button id="details-btn" class="btn" style="background-color:#ffbf00">Details</button></div>
+                <div class=" card rounded-3 single-product bg-success bg-opacity-10">
+                    <div>
+                      <img class="product-image" src=${image}></img>
+                    </div>
+                    <h3>${product.title}</h3>
+                    <p>Category: ${product.category}</p>
+                    <h3 class="text-danger">Ratings: ${product.rating.rate} , ${product.rating.count}
+                    <h2>Price: $ ${product.price}</h2>
+                    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn " style="background-color: #0080ff; color: white">Add to cart</button>
+                    <button id="details-btn" class="btn" style="background-color:#ffbf00">Details</button>
+                </div>
             `;
           document.getElementById("all-products").appendChild(div);
   }
